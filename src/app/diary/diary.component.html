@@ -10,7 +10,7 @@
         <li id="{{i}}" appStrikethrough>{{diary.name}}due on {{diary.completeDate|date}}</li>
         <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
 
-        <app-diary-details *ngIf="diary.showDescription" [diaries]='diaries' (isComplete)= 'deleteDiary($event,i)'></app-diary-details>
+        <app-diary-details *ngIf="diary.showDescription" [diary]='diary' (isComplete)= 'deleteDiary($event,i)'></app-diary-details>
     </div>
 </ul>
 </div>
